@@ -13,6 +13,7 @@ app.use(
 )
 
 dotEnv.config()
+const port = process.env.port ||5000;
 app.use(bodyParser.json())
 
 
@@ -26,4 +27,4 @@ app.get('/happy',(req,res)=>{
     res.send({message:"hi ra pappu"})
 })
 
-app.listen(5000,()=>{console.log('server runing')})
+app.listen(port,()=>{console.log('server runing')})
