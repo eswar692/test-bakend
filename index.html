@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+        }
+      input{
+        width: 180px;
+        height: 25px;
+      }
+      .age-input{
+        margin-left: 11px;
+      }
+      button{
+        margin-top: 30px;
+        width: 70px;
+        height: 30px;
+        margin-left: 30px;
+      }
+    </style>
+    <div>
+        <div class="div">
+            Name:
+         <input type="text">
+        </div>
+       <br>
+       <div class="div">
+       Age:
+        <input type="number" class="age-input">
+
+       </div>
+       <button>Submit</button>
+       
+
+    </div>
+
+
+
+    <script>
+      async function v(){
+
+          const xhr =  new XMLHttpRequest();
+
+              
+          xhr.open('GET','http://localhost:5000/citizen/get');
+          xhr.send();
+          const res = await xhr.response;
+          console.log('wds')
+
+
+      }
+      v();
+
+
+    
+    
+     
+
+       
+
+      
+    </script>
+    
+
+
+    
+</body>
+</html>
